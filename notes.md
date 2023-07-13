@@ -36,3 +36,13 @@ Usar ORM com Query a mão nos casos de gargalos.
 # USAR PRIMAS / CONFIGURAR
     yarn add prisma
     yarn prisma init
+    configurar .env
+
+No arquivo schema.primsa, criamos o modelos
+
+    model User {
+        id       String @id @default(uuid()) @db.Uuid
+        name     String
+        email    String @unique
+        password String
+    }
