@@ -33,7 +33,7 @@ Lidamos como um objeto.
 Usar ORM com Query a mão nos casos de gargalos.
 
 
-# USAR PRIMAS / CONFIGURAR
+## USAR PRIMAS / CONFIGURAR
     yarn add prisma
     yarn prisma init
     configurar .env
@@ -46,3 +46,17 @@ No arquivo schema.primsa, criamos o modelos
         email    String @unique
         password String
     }
+
+
+
+
+## Criando recurso (pastas com funcoes)
+* nest g resource users
+
+DTO -> Objeto que enviamos para um metodo (somente padrao de nomemclatura)
+
+## Fluxo Create User
+    Request -> Pipes -> UsersControoler.create -> UsersService.create
+
+Pipe serve para transformar (int para string), ou validar (como meu middleware)
+https://github.com/typestack/class-validator#usage
